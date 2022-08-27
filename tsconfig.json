@@ -1,20 +1,36 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/api/*": ["shared/api/*"],
+      "@/components/*": ["shared/components/*"],
+      "@/hooks/*": ["shared/hooks/*"],
+      "@/utils/*": ["shared/utils/*"],
+      "@/public/*": ["public/*"],
+      "@/styles/*": ["styles/*"]
+    },
+    "lib": ["DOM", "ES2017"],
+    "module": "esnext",
+    "moduleResolution": "Node",
+    "target": "esnext",
+    "sourceMap": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "incremental": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "isolatedModules": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "shared/components/hoc/privateRoute.ts"
+  ],
   "exclude": ["node_modules"]
 }
