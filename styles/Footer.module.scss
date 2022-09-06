@@ -1,0 +1,11 @@
+.container {
+    background: rgb(245, 245, 245);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    color: #202329;
+    font-weight: bold;
+    span {
+        color: rgb(255, 152, 0);
+    }
+}
