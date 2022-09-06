@@ -3,6 +3,7 @@ import style from "../styles/Home.module.scss";
 import NavBar from "../shared/components/layout/NavBar";
 import { useCharacterHomeApi } from "@/api/api";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const { status, data, error } = useCharacterHomeApi();
@@ -44,7 +45,9 @@ const Home: NextPage = () => {
                     <div className={style.text}>
                       {/* Character name and status */}
                       <div>
-                        <h2>{char.name}</h2>
+                        <Link href={"/"}>
+                          <a className={style.charName}>{char.name}</a>
+                        </Link>
                         <div className={style.status}>
                           <span
                             className={
@@ -61,12 +64,16 @@ const Home: NextPage = () => {
                       {/* Character last know location */}
                       <div>
                         <p>Last known location:</p>
-                        <h3>{char.status}</h3>
+                        <Link href={`/`}>
+                          <a>{char.location.name}</a>
+                        </Link>
                       </div>
                       {/* Character first seen */}
                       <div>
-                        <p>First seen in:</p>
-                        <h3>{char.origin.name}</h3>
+                        <p>Character type:</p>
+                        <a>
+                          {char.species} {char.type}
+                        </a>
                       </div>
                     </div>
                   </div>
