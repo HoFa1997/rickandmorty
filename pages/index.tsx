@@ -4,6 +4,7 @@ import NavBar from "../shared/components/layout/NavBar";
 import { useCharacterHomeApi } from "@/api/api";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/layout/Footer";
 
 const Home: NextPage = () => {
   const { status, data, error } = useCharacterHomeApi();
@@ -82,6 +83,7 @@ const Home: NextPage = () => {
             })}
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
