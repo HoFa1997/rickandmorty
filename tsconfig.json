@@ -8,6 +8,7 @@
     "paths": {
       "@/api/*": ["shared/api/*"],
       "@/components/*": ["shared/components/*"],
+      "@/config/*": ["shared/config/*"],
       "@/hooks/*": ["shared/hooks/*"],
       "@/utils/*": ["shared/utils/*"],
       "@/public/*": ["public/*"],
