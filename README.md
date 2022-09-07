@@ -1,2 +1,2 @@
 # Rick & Morty Demo Website:)
-this Project Built With Typescript - Reactjs - Nextjs - Sass - Axios😃💡
+this Project Built With Typescript - Nextjs - Sass - Axios😃💡
