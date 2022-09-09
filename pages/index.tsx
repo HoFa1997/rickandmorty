@@ -12,29 +12,31 @@ const Home: NextPage = () => {
   if (status === "loading") return <>Loading...</>;
 
   return (
-    <>
-      <Layout>
-        <Container>
+    <Layout>
+        <>
           <HeaderHomePage />
-          <Grid container columnSpacing={5} rowSpacing={3} textAlign="left">
-            {data.map((char) => {
-              return (
-                <Grid key={char.id} item lg={6} md={6} sm={11} xs={11}>
-                  <CharacterCard
-                    charName={char.name}
-                    charStatus={char.status}
-                    charSpecies={char.species}
-                    charLocationName={char.location.name}
-                    charType={char.species}
-                    image={char.image}
-                  />
+          <Box bgcolor="#202329" padding='5rem 0'>
+            <Container>
+                <Grid container columnSpacing={5} rowSpacing={3} textAlign="left">
+                  {data.map((char) => {
+                    return (
+                      <Grid key={char.id} item lg={6} md={6} sm={11} xs={11}>
+                        <CharacterCard
+                          charName={char.name}
+                          charStatus={char.status}
+                          charSpecies={char.species}
+                          charLocationName={char.location.name}
+                          charType={char.species}
+                          image={char.image}
+                        />
+                      </Grid>
+                    );
+                  })}
                 </Grid>
-              );
-            })}
-          </Grid>
-        </Container>
+            </Container>
+          </Box>
+        </>
       </Layout>
-    </>
   );
 };
 
