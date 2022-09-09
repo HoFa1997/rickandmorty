@@ -12,27 +12,6 @@
   background-position: bottom;
   height: 400px;
   width: 100%;
-  text-align: center;
-
-  p {
-    color: rgb(32, 35, 41);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 5.625rem;
-    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
-      "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    font-weight: 800;
-    -webkit-box-pack: center;
-  }
-  @media (max-width: 55.625em) {
-    p {
-      font-size: 3.75rem;
-    }
-  }
 }
 
 .homeBg {

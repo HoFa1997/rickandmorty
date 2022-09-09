@@ -1,11 +1,23 @@
-import type { NextPage } from "next";
-import style from "../styles/Home.module.scss";
-import NavBar from "../shared/components/layout/NavBar";
-import { useCharacterHomeApi } from "@/api/api";
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/layout/Footer";
+import {Card, styled, Typography} from "@mui/material";
+import type { NextPage } from "next";
+import style from "../styles/Home.module.scss";
+import { useCharacterHomeApi } from "@/api/api";
 import Layout from "@/components/layout/Layout";
+import { TypographyProps } from "@mui/system";
+
+const MainTypography = styled(Typography)<TypographyProps>({
+  color: 'rgb(32, 35, 41)',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+  fontSize: '5.625rem',
+  fontFamily: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji','Segoe UI Symbol'",
+  fontWeight: 800
+})
 
 const Home: NextPage = () => {
   const { status, data, error } = useCharacterHomeApi();
@@ -16,7 +28,9 @@ const Home: NextPage = () => {
       <Layout>
         <div className={style.MainDiv}>
           <div className={style.navbarContent}>
-            <p>Rick and Morty by HoFa</p>
+            <MainTypography>
+              Rick and Morty by HoFa
+            </MainTypography>
           </div>
           <div className={style.homeBg}>
             <div className={style.homeContent}>
