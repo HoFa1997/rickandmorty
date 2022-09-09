@@ -7,8 +7,6 @@ const GlobalStyleCustom: FunctionComponent<GlobalStyleCustomProps> = () => {
   return (
     <GlobalStyles
       styles={(theme) => ({
-        h1: { color: theme.palette.primary.main },
-        h2: { color: "green" },
         body: {
           fontFamily: `-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
               Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif`,

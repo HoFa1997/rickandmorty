@@ -1,77 +1,38 @@
 import type { NextPage } from "next";
-import style from "../styles/Home.module.scss";
-import NavBar from "../shared/components/layout/NavBar";
 import { useCharacterHomeApi } from "@/api/api";
-import Image from "next/image";
-import Link from "next/link";
-import Footer from "@/components/layout/Footer";
 import Layout from "@/components/layout/Layout";
+import { Box, Container, Grid, Paper, useTheme } from "@mui/material";
+import CharacterCard from "@/components/homePage/charItem";
+import HeaderHomePage from "@/components/homePage/header";
 
 const Home: NextPage = () => {
+  const theme = useTheme();
   const { status, data, error } = useCharacterHomeApi();
 
   if (status === "loading") return <>Loading...</>;
+
   return (
     <>
       <Layout>
-        <div className={style.MainDiv}>
-          <div className={style.navbarContent}>
-            <p>Rick and Morty by HoFa</p>
-          </div>
-          <div className={style.homeBg}>
-            <div className={style.homeContent}>
-              {data.map((char) => {
-                return (
-                  <>
-                    <div className={style.card}>
-                      <Image
-                        className={style.imgContainer}
-                        src={char.image}
-                        alt={char.name}
-                        height={220}
-                        width={220}
-                      />
-                      <div className={style.text}>
-                        {/* Character name and status */}
-                        <div>
-                          <Link href={"/"}>
-                            <a className={style.charName}>{char.name}</a>
-                          </Link>
-                          <div className={style.status}>
-                            <span
-                              className={
-                                char.status === "Dead"
-                                  ? style.circleDead
-                                  : style.circleAlive
-                              }
-                            />
-                            <span>{char.status}</span>
-                            <span> - </span>
-                            <span>{char.species}</span>
-                          </div>
-                        </div>
-                        {/* Character last know location */}
-                        <div>
-                          <p>Last known location:</p>
-                          <Link href={`/`}>
-                            <a>{char.location.name}</a>
-                          </Link>
-                        </div>
-                        {/* Character first seen */}
-                        <div>
-                          <p>Character type:</p>
-                          <a>
-                            {char.species} {char.type}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <Container>
+          <HeaderHomePage />
+          <Grid container columnSpacing={5} rowSpacing={3} textAlign="left">
+            {data.map((char) => {
+              return (
+                <Grid key={char.id} item lg={6} md={6} sm={11} xs={11}>
+                  <CharacterCard
+                    charName={char.name}
+                    charStatus={char.status}
+                    charSpecies={char.species}
+                    charLocationName={char.location.name}
+                    charType={char.species}
+                    image={char.image}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Container>
       </Layout>
     </>
   );
