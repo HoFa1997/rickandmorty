@@ -11,10 +11,10 @@ const MainTypography = styled(Typography)<TypographyProps>({
   justifyContent: "center",
   alignItems: "center",
   height: "100%",
-  fontSize: "5.625rem",
+  fontSize: "4rem",
   fontFamily:
     "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji','Segoe UI Symbol'",
-  fontWeight: 800,
+  fontWeight: 900,
 });
 
 const HeaderContainer = styled(Box)<BoxProps>({
@@ -29,7 +29,7 @@ const HeaderContainer = styled(Box)<BoxProps>({
 const HeaderHomePage: FunctionComponent<HeaderHomePageProps> = () => {
   return (
     <HeaderContainer>
-      <MainTypography>Rick and Morty by HoFa</MainTypography>
+      <MainTypography>Rick and Morty by HoFa & Shayan</MainTypography>
     </HeaderContainer>
   );
 };
