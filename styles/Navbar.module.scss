@@ -6,14 +6,14 @@
   align-items: center;
   height: 60px;
   background: rgb(245, 245, 245);
-    .buttonContainer {
-      display: flex;
-      justify-content: flex-end;
-    }
-    .logoContainer {
-      display: flex;
-      justify-content: flex-start;
-    }
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .logoContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .borderButton {
@@ -22,7 +22,7 @@
   border: 2px solid rgb(255, 152, 0);
   color: black;
   margin: 8px;
-  padding: .8rem;
+  padding: 0.8rem;
   font-size: 13.5px;
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
     "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -30,9 +30,6 @@
   cursor: pointer;
 }
 .borderButton:hover {
-  color: white;
-  border: 1px solid rgb(255, 152, 0);
-  background: rgb(255, 152, 0);
 }
 
 .textButton {
@@ -52,10 +49,10 @@
 @media (max-width: 55.625em) {
   .borderButton {
     font-size: 9px;
-    padding: .2rem .4rem;
+    padding: 0.2rem 0.4rem;
   }
 
   .Container {
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
   }
 }
