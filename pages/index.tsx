@@ -20,7 +20,7 @@ const Home: NextPage = () => {
                 <Grid container columnSpacing={5} rowSpacing={3} textAlign="left">
                   {data.map((char) => {
                     return (
-                      <Grid key={char.id} item lg={6} md={6} sm={11} xs={11}>
+                      <Grid key={char.id} item lg={6} md={6} sm={11} xs={11} margin="auto">
                         <CharacterCard
                           charName={char.name}
                           charStatus={char.status}
