@@ -25,7 +25,7 @@ const CharacterCard: FunctionComponent<CharacterCardProps> = ({
   return (
     <Card sx={{ backgroundColor: '#3C3E44', borderRadius: '10px' }}>
       <Grid  container columns={4}>
-        <Grid sx={{ position: "relative", height: { xs: 350, sm: 220 }}} item md={1.5} xs={4}>
+        <Grid sx={{ position: "relative", height: { xs: 350, sm: 230 }}} item md={1.5} xs={4}>
           <Image layout="fill" objectFit="cover" src={image} alt={charName} />
         </Grid>
         <Grid item xs={4} md={2.5}>
