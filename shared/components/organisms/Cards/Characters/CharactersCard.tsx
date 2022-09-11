@@ -1,6 +1,5 @@
 import { Card, Grid, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import { positions } from "@mui/system";
 import Image from "next/image";
 import { FunctionComponent } from "react";
 import CircleIcon from '@mui/icons-material/Circle';
